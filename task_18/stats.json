@@ -1,0 +1,11 @@
+{
+   "requests_by_method": {
+      "GET": 31,
+      "POST": 10,
+      "PUT": 4,
+      "DELETE": 2
+   },
+   "errors 4xx": 12,
+   "most_frequent_url": "/login",
+   "most_frequent_url_count": 12
+}

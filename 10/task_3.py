@@ -1,22 +1,20 @@
-a = str('aaabbbhhccc').lower().replace(' ', '')
+a = 'aaabbbhhccc'
 
-m = []
-def f(string):
-    n = 0
-    for char in string:
-        if string.count(char)>=n:
-            n = string.count(char)
-    for char in string:
-        if string.count(char)==n:
-            m.append(char)
-            a = string.replace(char, '')
-            n = 0
+
+def f(string :str):
+    frequency = {}
+    for char in string.lower():
+        if char != ' ':
+            frequency[char] = frequency.get(char, 0) + 1
+    remaining = dict(frequency)
+    result = []
+    while remaining and len(result)<3:
+        best_char = max(remaining, key=remaining.get)
+        result.append((best_char, remaining.pop(best_char)))
+    return result
             
-            return a
-                
-while a!='':
-    a = f(a)
-    if len(m)==3:
-        print(m)
-        break
+
+m = f(a) 
+print(m)   
+
 

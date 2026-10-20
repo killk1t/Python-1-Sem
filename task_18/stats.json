@@ -5,7 +5,7 @@
       "PUT": 4,
       "DELETE": 2
    },
-   "errors 4xx": 12,
+   "errors_4xx": 12,
    "most_frequent_url": "/login",
    "most_frequent_url_count": 12
 }
